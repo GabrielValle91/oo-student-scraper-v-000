@@ -13,14 +13,15 @@ class Scraper
         student_hash[:name] = student.css("h4").text
         student_hash[:location] = student.css("p").text
         student_hash[:profile_url] = student.css("a").attribute("href").value
-        #binding.pry
+
       student_array << student_hash
     end
-    binding.pry
     student_array
   end
 
   def self.scrape_profile_page(profile_url)
+    html = open(profile_url)
+    doc = Nokogiri::HTML(html)
 
   end
 
