@@ -26,9 +26,17 @@ class Scraper
     binding.pry
     student_hash = {}
     student_links.each do |link|
-      link.css("a").attribute("href").value
+      if link.css("a").attribute("href").value.contains?("twitter")
+        student_hash[:twitter] = link.css("a").attribute("href").value
+      elsif link.css("a").attribute("href").value.contains?("linkedin")
+        student_hash[:linkedin] = link.css("a").attribute("href").value
+      elsif link.css("a").attribute("href").value.contains?("github")
+        student_hash[:github] = link.css("a").attribute("href").value
+      else
+        student_hash[:blog] = link.css("a").attribute("href").value
+      end
     end
-    student_hash[:twitter] = doc.css("")
+    
   #  :twitter=>"https://twitter.com/jmburges",
   #                            :linkedin=>"https://www.linkedin.com/in/jmburges",
   #                            :github=>"https://github.com/jmburges",
