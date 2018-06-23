@@ -26,12 +26,12 @@ class Scraper
     binding.pry
     student_hash = {}
     student_hash[:twitter] = doc.css("")
-    :twitter=>"https://twitter.com/jmburges",
-                              :linkedin=>"https://www.linkedin.com/in/jmburges",
-                              :github=>"https://github.com/jmburges",
-                              :blog=>"http://joemburgess.com/",
-                              :profile_quote=>"\"Reduce to a previously solved problem\"",
-                              :bio=>
+  #  :twitter=>"https://twitter.com/jmburges",
+  #                            :linkedin=>"https://www.linkedin.com/in/jmburges",
+  #                            :github=>"https://github.com/jmburges",
+  #                            :blog=>"http://joemburgess.com/",
+  #                            :profile_quote=>"\"Reduce to a previously solved problem\"",
+  #                            :bio=>
   end
 
 end
