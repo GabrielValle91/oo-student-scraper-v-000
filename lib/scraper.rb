@@ -35,6 +35,7 @@ class Scraper
       else
         student_hash[:blog] = link.css("a").attribute("href").value
       end
+      binding.pry
     end
     binding.pry
   #  :twitter=>"https://twitter.com/jmburges",
