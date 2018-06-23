@@ -22,7 +22,15 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
-
+    student_links = doc.css(".social-icon-container a").attribute("href").value
+    student_hash = {}
+    student_hash[:twitter] = doc.css("")
+    :twitter=>"https://twitter.com/jmburges",
+                              :linkedin=>"https://www.linkedin.com/in/jmburges",
+                              :github=>"https://github.com/jmburges",
+                              :blog=>"http://joemburgess.com/",
+                              :profile_quote=>"\"Reduce to a previously solved problem\"",
+                              :bio=>
   end
 
 end
