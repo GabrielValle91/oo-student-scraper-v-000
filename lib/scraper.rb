@@ -37,7 +37,7 @@ class Scraper
       end
       binding.pry
     end
-    binding.pry
+    #binding.pry
   #  :twitter=>"https://twitter.com/jmburges",
   #                            :linkedin=>"https://www.linkedin.com/in/jmburges",
   #                            :github=>"https://github.com/jmburges",
