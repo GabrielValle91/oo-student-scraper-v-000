@@ -16,7 +16,7 @@ class Scraper
         #binding.pry
       student_array << student_hash
     end
-    #binding.pry
+    binding.pry
     student_array
   end
 
