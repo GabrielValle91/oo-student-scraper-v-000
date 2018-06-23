@@ -37,6 +37,7 @@ class Scraper
       end
       binding.pry
     end
+    student_hash
     #binding.pry
   #  :twitter=>"https://twitter.com/jmburges",
   #                            :linkedin=>"https://www.linkedin.com/in/jmburges",
