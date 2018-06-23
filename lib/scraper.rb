@@ -27,13 +27,13 @@ class Scraper
     student_hash = {}
     student_links.each do |link|
       if link.attribute("href").value.include?("twitter")
-        student_hash[:twitter] = link.css("a").attribute("href").value
+        student_hash[:twitter] = link.attribute("href").value
       elsif link.attribute("href").value.include?("linkedin")
-        student_hash[:linkedin] = link.css("a").attribute("href").value
+        student_hash[:linkedin] = link.attribute("href").value
       elsif link.attribute("href").value.include?("github")
-        student_hash[:github] = link.css("a").attribute("href").value
+        student_hash[:github] = link.attribute("href").value
       else
-        student_hash[:blog] = link.css("a").attribute("href").value
+        student_hash[:blog] = link.attribute("href").value
       end
       #binding.pry
     end
