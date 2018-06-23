@@ -37,6 +37,9 @@ class Scraper
       end
       #binding.pry
     end
+
+    student_hash[:profile_quote] = doc.css(".profile-quote").text
+
     student_hash
     #binding.pry
   #  :twitter=>"https://twitter.com/jmburges",
