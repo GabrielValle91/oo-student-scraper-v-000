@@ -25,6 +25,9 @@ class Scraper
     student_links = doc.css(".social-icon-container")
     binding.pry
     student_hash = {}
+    student_links.each do |link|
+      link.css("a").attribute("href").value
+    end
     student_hash[:twitter] = doc.css("")
   #  :twitter=>"https://twitter.com/jmburges",
   #                            :linkedin=>"https://www.linkedin.com/in/jmburges",
